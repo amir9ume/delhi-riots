@@ -25,9 +25,15 @@ def search_query(args):
     print(i, "finished")
 
 if __name__=="__main__":
+    
     participant_handles_df = pd.read_csv('data/unique_users.csv', usecols=['username'])
-    print("number of unique users: ",participant_handles_df.shape[0])
+    NUM_USERS = participant_handles_df.shape[0]
+
+    print("number of unique users: ",NUM_USERS)
 
     NUM_THREAD = 10
+
+    SLICE_SIZE = int(NUM_USERS/NUM_THREAD)
+
     pool = Pool(NUM_THREAD)
-    pool.map(search_query, [{i:participant_handles_df.username[580*i:580*i+579]} for i in range(NUM_THREAD)])
+    pool.map(search_query, [{i:participant_handles_df.username[SLICE_SIZE*i:SLICE_SIZE*(i+1]} for i in range(NUM_THREAD)])
