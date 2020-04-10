@@ -36,4 +36,4 @@ if __name__=="__main__":
     SLICE_SIZE = int(NUM_USERS/NUM_THREAD)
 
     pool = Pool(NUM_THREAD)
-    pool.map(search_query, [{i:participant_handles_df.username[SLICE_SIZE*i:SLICE_SIZE*(i+1]} for i in range(NUM_THREAD)])
+    pool.map(search_query, [{i:participant_handles_df.username[SLICE_SIZE*i:SLICE_SIZE*(i+1)]} for i in range(NUM_THREAD)])
