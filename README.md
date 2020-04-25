@@ -35,7 +35,7 @@ For this objective **twitter** is chosen and data is acquired using [twint](http
 Inorder to collect data for this assignment [twint](https://github.com/twintproject/twint) is used. Twint is an advanced twitter scrapping tool which has no limits and no authentication required. The project is 2 years old, however, there is [active participation](https://github.com/twintproject/twint/graphs/code-frequency) by contributors.    
 
 #### data-files  
-[data folder link](https://1drv.ms/u/s!Ar5tr8dhdBGkiusiggF8XtPoyLgwtw?e=hobgZr)  
+[dataset on kaggle](https://www.kaggle.com/hamzaafridi/delhi-riots-tweets)  
 
 #### Contact
 me@hamzaafridi.com
